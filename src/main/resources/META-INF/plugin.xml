@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.carlosdurazo.pacman</id>
     <name>Pacman Progress Bar</name>
-    <version>1.0</version>
+    <version>1.1</version>
     <idea-version since-build="193.1822"/>
     <vendor email="guillermo.durazo@gmail.com">Carlos Durazo</vendor>
 
@@ -24,9 +24,8 @@
     <actions>
     </actions>
 
-    <application-components>
-        <component>
-            <implementation-class>com.carlosdurazo.pacman.PacmanProgressBarComponent</implementation-class>
-        </component>
-    </application-components>
+    <applicationListeners>
+        <listener class="com.carlosdurazo.pacman.PacmanProgressBarListener"
+                  topic="com.intellij.ide.ui.LafManagerListener"/>
+    </applicationListeners>
 </idea-plugin>
